@@ -1,0 +1,91 @@
+aid: subsplash
+name: Subsplash
+review:
+  question: Does Subsplash expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Subsplash's developer API is a gated REST
+    (HTTPS) surface hosted on core.subsplash.com and authenticated with OAuth 2.0.
+    Its realtime-style behavior (push notifications, in-app messages) is delivered
+    through mobile push channels and Subsplash's communications engine, not through
+    a documented server-push transport (WebSocket or SSE) on Subsplash's own public
+    API. There is no publicly documented ws:// or wss:// endpoint to model, and the
+    full endpoint reference is behind a documentation-access gate, so no AsyncAPI
+    document was created.
+findings:
+  summary: |
+    Subsplash does not publish a documented public WebSocket API. Subsplash is an
+    all-in-one church/ministry platform (apps, websites, media, giving, and church
+    management). It does expose a REAL developer API, but access is gated: the full
+    documentation is released only after submitting the documentation-access form at
+    developer.subsplash.com/form, and API credentials (OAuth 2.0 Client ID / Client
+    Secret) must be provisioned by a Subsplash representative, typically on a
+    qualifying paid plan (Pro / Enterprise). Public product, support, and
+    integration material describes REST access over HTTPS on the core.subsplash.com
+    host, covering media, giving records, people (People Sync) and SSO, groups and
+    messaging, and events/registrations. No realtime, bidirectional, or streaming
+    WebSocket endpoint is documented on Subsplash's own public API.
+  accessModel: |
+    Gated / partner. Documentation is form-gated (developer.subsplash.com/form,
+    "grants access to documentation and resources only ... does not provide API
+    credentials"). Credentials are provisioned via a Subsplash representative /
+    Client Success Manager and generally require a Pro or Enterprise plan.
+    Authentication is OAuth 2.0 (Authorization Code, Client Credentials, and other
+    flows); the OAuth redirect is handled at
+    https://core.subsplash.com/end-user-auth/v1/authproviders/result.
+  endpointsModeled: |
+    The logical APIs listed in apis.yml (Media Library, Giving, People, Groups and
+    Messaging, Events) are modeled from Subsplash's public product/support/
+    integration material, not transcribed from an open reference, because the
+    documented endpoint surface is behind the documentation-access gate. No
+    OpenAPI, rate-limits, or FinOps artifacts were fabricated.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://core.subsplash.com
+      documented: true
+      note: Gated developer REST API, OAuth 2.0. Full endpoint reference behind developer.subsplash.com/form.
+    - protocol: OAuth 2.0
+      scheme: https
+      documented: true
+      note: Authorization Code / Client Credentials and other flows; redirect at core.subsplash.com/end-user-auth/v1/authproviders/result.
+    - protocol: Push Notifications
+      scheme: https
+      documented: true
+      note: In-app messages and mobile push via Subsplash's communications engine. Vendor push channels, not a WebSocket on Subsplash's own API.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on any public Subsplash developer, support, or product page as of the review date.
+sources:
+  - url: https://developer.subsplash.com/
+    type: Documentation
+    note: Official developer site; REST API positioning, docs gated behind an access form.
+  - url: https://developer.subsplash.com/form
+    type: Documentation
+    note: Documentation-access form; grants docs only, not API credentials.
+  - url: https://support.subsplash.com/en/articles/11610463-subsplash-api
+    type: Documentation
+    note: Programmatic access to the platform and your data; upgrade/plan-gated, directs to developer site.
+  - url: https://support.subsplash.com/en/collections/16168637-developer-resources
+    type: Documentation
+    note: Developer Resources collection.
+  - url: https://www.subsplash.com/use-cases/enterprise
+    type: Documentation
+    note: Enterprise integrations - SSO, People Sync, Online Giving, Groups and Messaging, Push Notifications, Event Payments.
+  - url: https://github.com/Subsplash
+    type: SourceCode
+    note: GitHub org; only a fastlane fork and an archived challenge repo - no public API SDK or OpenAPI.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface is documented, and Subsplash's own public API is
+    a gated OAuth 2.0 REST surface on core.subsplash.com. No AsyncAPI document was
+    created because there is no documented server-push transport on Subsplash's own
+    API to model; push notifications are delivered through mobile push channels.
+    APIs in apis.yml are flagged endpointsModeled because the full reference is
+    behind a documentation-access gate.

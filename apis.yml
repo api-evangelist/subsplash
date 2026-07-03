@@ -1,0 +1,147 @@
+aid: subsplash
+url: https://raw.githubusercontent.com/api-evangelist/subsplash/refs/heads/main/apis.yml
+name: Subsplash
+kind: company
+description: Subsplash is an all-in-one church and ministry engagement platform -
+  custom mobile and TV apps, websites, media hosting and delivery, online giving,
+  and church management (People, Groups, Events, Volunteers). Subsplash publishes a
+  REST developer API (OAuth 2.0, hosted on core.subsplash.com) for programmatic
+  access to media, giving records, people, groups and messaging, and event
+  registrations. Access is gated - full API documentation is released only after
+  submitting the developer documentation-access form, and API credentials (Client
+  ID / Client Secret) must be provisioned by a Subsplash representative on a
+  qualifying paid plan (Pro / Enterprise). Because the documented endpoint surface
+  is behind that gate, the APIs listed here are modeled from Subsplash's public
+  product, support, and integration material rather than transcribed from an open
+  reference, and are flagged endpointsModeled.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Church
+- Ministry
+- Nonprofit
+- Giving
+- Media
+- Church Management
+- ChMS
+- Mobile Apps
+- Partner API
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis:
+- aid: subsplash:subsplash-media-library-api
+  name: Subsplash Media Library API
+  tags:
+  - Media
+  - Sermons
+  - Podcasts
+  - Content
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.subsplash.com/
+  baseURL: https://core.subsplash.com
+  endpointsModeled: true
+  properties:
+  - url: https://developer.subsplash.com/
+    type: Documentation
+  - url: https://support.subsplash.com/en/articles/11610463-subsplash-api
+    type: Documentation
+  description: Programmatic access to an organization's media catalog - sermons,
+    series, podcasts, blogs, and announcements - for syncing content into external
+    sites, AI/search pipelines, and custom apps. Endpoints are modeled from
+    Subsplash's public product material; the documented surface is gated behind the
+    developer documentation-access form.
+- aid: subsplash:subsplash-giving-api
+  name: Subsplash Giving API
+  tags:
+  - Giving
+  - Donations
+  - Payments
+  - Fundraising
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.subsplash.com/
+  baseURL: https://core.subsplash.com
+  endpointsModeled: true
+  properties:
+  - url: https://developer.subsplash.com/
+    type: Documentation
+  - url: https://support.subsplash.com/en/articles/11610463-subsplash-api
+    type: Documentation
+  description: Sync online giving and donation records from Subsplash Giving into
+    accounting, CRM, and church-management systems - donations, donors, funds, and
+    recurring gifts. Endpoints are modeled; access requires OAuth credentials
+    provisioned by Subsplash on a qualifying plan.
+- aid: subsplash:subsplash-people-api
+  name: Subsplash People API
+  tags:
+  - People
+  - People Sync
+  - Directory
+  - Members
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.subsplash.com/
+  baseURL: https://core.subsplash.com
+  endpointsModeled: true
+  properties:
+  - url: https://developer.subsplash.com/
+    type: Documentation
+  - url: https://www.subsplash.com/use-cases/enterprise
+    type: Documentation
+  description: People Sync surface for unifying member and contact records across
+    systems, plus Single Sign-On (SSO) user provisioning. Modeled from Subsplash's
+    enterprise integration material (People Sync, SSO); the documented endpoints are
+    gated.
+- aid: subsplash:subsplash-groups-messaging-api
+  name: Subsplash Groups and Messaging API
+  tags:
+  - Groups
+  - Messaging
+  - Communications
+  - Push Notifications
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.subsplash.com/
+  baseURL: https://core.subsplash.com
+  endpointsModeled: true
+  properties:
+  - url: https://developer.subsplash.com/
+    type: Documentation
+  - url: https://support.subsplash.com/en/articles/8500894-subsplash-groups-messaging
+    type: Documentation
+  description: Manage groups, group membership, and messaging, and trigger push
+    notifications and in-app messages through Subsplash's communications engine.
+    Endpoints are modeled from public product material; access is gated behind a
+    qualifying plan and Subsplash-provisioned credentials.
+- aid: subsplash:subsplash-events-api
+  name: Subsplash Events API
+  tags:
+  - Events
+  - Registrations
+  - Payments
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://developer.subsplash.com/
+  baseURL: https://core.subsplash.com
+  endpointsModeled: true
+  properties:
+  - url: https://developer.subsplash.com/
+    type: Documentation
+  - url: https://www.subsplash.com/use-cases/enterprise
+    type: Documentation
+  description: Manage events, event registrations, and event payments for syncing
+    sign-ups and transactions into external systems. Endpoints are modeled; the
+    documented reference is released only after the developer documentation-access
+    form.
+common:
+- type: GitHubOrganization
+  url: https://github.com/Subsplash
+- type: LinkedIn
+  url: https://www.linkedin.com/company/subsplash
+- type: Website
+  url: https://www.subsplash.com
+- type: Documentation
+  url: https://developer.subsplash.com/
+- type: SignUp
+  url: https://developer.subsplash.com/form
+- type: Plans
+  url: plans/subsplash-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

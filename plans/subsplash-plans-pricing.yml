@@ -1,0 +1,118 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Subsplash
+providerId: subsplash
+created: '2026-07-03'
+modified: '2026-07-03'
+reconciled: false
+tags:
+- Church
+- Ministry
+- Giving
+- Media
+- Plans
+description: >-
+  Subsplash uses a modular, contact-sales pricing model: a base platform plus
+  add-on features (custom apps, media hosting, websites, giving, church
+  management). Reported market pricing starts around $149/mo, with most churches
+  landing at roughly $300-800/mo after add-ons, and enterprise / multi-campus
+  organizations in the ~$700-1,200+/mo range. Subsplash Giving is advertised at
+  $0/mo with no setup fee, monetized on transaction processing fees (approximately
+  2.9% + $0.30 per card transaction and ~1% for ACH). Developer API access is not
+  a self-serve product: it is unlocked on qualifying paid plans (Pro / Enterprise)
+  and provisioned by a Subsplash representative. Exact rates are contact-sales and
+  are not reconciled here.
+notes: >-
+  Figures are drawn from Subsplash's public pricing page and third-party pricing
+  summaries and should be re-verified during reconciliation. The developer API
+  itself has no published standalone price - it is bundled into higher plan tiers
+  and gated behind representative provisioning.
+sources:
+- https://www.subsplash.com/pricing
+- https://www.subsplash.com/use-cases/enterprise
+- https://developer.subsplash.com/
+plans:
+- id: subsplash-giving
+  name: Subsplash Giving
+  type: usage
+  description: >-
+    Online giving platform advertised at $0/mo with no setup cost, monetized on
+    payment processing fees per transaction. Included in the platform and a common
+    entry point for the giving/donations API surface.
+  entries:
+  - label: Card Transaction Fee
+    name: card_transaction_fee
+    type: usage
+    metric: transaction
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: approximately 2.9% + $0.30 per card transaction
+    userMultiplied: false
+  - label: ACH Transaction Fee
+    name: ach_transaction_fee
+    type: usage
+    metric: transaction
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: approximately 1% per ACH (bank transfer) transaction
+    userMultiplied: false
+  elements:
+  - name: Online and Text Giving
+  - name: Recurring Giving
+  - name: Donor Records
+- id: subsplash-platform
+  name: Subsplash Platform (Base + Add-ons)
+  type: paid
+  description: >-
+    Modular base platform plus add-on features - custom mobile and TV apps, media
+    hosting and delivery, websites, and church management. Contact-sales pricing;
+    reported market rates start around $149/mo and commonly reach $300-800/mo with
+    add-ons.
+  entries:
+  - label: Platform Subscription
+    name: platform_subscription
+    type: flat
+    metric: subscription
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: from ~$149/mo (contact sales; varies by size and features)
+    userMultiplied: false
+  elements:
+  - name: Custom Mobile and TV Apps
+  - name: Media Hosting and Delivery
+  - name: Websites
+  - name: Church Management (People, Groups, Events)
+- id: subsplash-pro-enterprise
+  name: Pro / Enterprise (API Access)
+  type: enterprise
+  description: >-
+    Higher-tier / enterprise plans that unlock developer API access, SSO, People
+    Sync, and deeper integrations. API credentials (OAuth 2.0 Client ID / Secret)
+    are provisioned by a Subsplash representative. Custom, contact-sales pricing;
+    reported enterprise rates ~$700-1,200+/mo.
+  entries:
+  - label: Enterprise Agreement
+    name: enterprise
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: month
+    geo: global
+    unit: 1
+    price: contact sales (~$700-1,200+/mo reported for enterprise)
+    userMultiplied: false
+  elements:
+  - name: Developer API Access
+  - name: Single Sign-On (SSO)
+  - name: People Sync
+  - name: Priority Support
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
