@@ -130,6 +130,10 @@ apis:
     documented reference is released only after the developer documentation-access
     form.
 common:
+- type: VulnerabilityDisclosure
+  url: security/subsplash-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/subsplash-domain-security.yml
 - type: GitHubOrganization
   url: https://github.com/Subsplash
 - type: LinkedIn
@@ -142,6 +146,8 @@ common:
   url: https://developer.subsplash.com/form
 - type: Plans
   url: plans/subsplash-plans-pricing.yml
+- url: https://www.subsplash.com/blog
+  type: Blog
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
