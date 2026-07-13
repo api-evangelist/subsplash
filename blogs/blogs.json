@@ -1,0 +1,14 @@
+{
+  "repo": "subsplash",
+  "feeds": [
+    {
+      "source": "https://www.subsplash.com/blog",
+      "feed_url": "https://www.subsplash.com/blog/rss.xml",
+      "title": "",
+      "saved": 5,
+      "method": "discovered"
+    }
+  ],
+  "fetched": "2026-07-11T11:50:51Z",
+  "post_count": 30
+}
