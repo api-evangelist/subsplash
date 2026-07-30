@@ -14,7 +14,19 @@ description: Subsplash is an all-in-one church and ministry engagement platform 
   is behind that gate, the APIs listed here are modeled from Subsplash's public
   product, support, and integration material rather than transcribed from an open
   reference, and are flagged endpointsModeled.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/subsplash.png
 tags:
 - Church
 - Ministry
