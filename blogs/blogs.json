@@ -5,7 +5,7 @@
       "source": "https://www.subsplash.com/blog/rss.xml",
       "feed_url": "https://www.subsplash.com/blog/rss.xml",
       "title": "",
-      "saved": 0,
+      "saved": 11,
       "method": "feed"
     },
     {
@@ -16,6 +16,6 @@
       "method": "discovered"
     }
   ],
-  "fetched": "2026-08-06T14:08:46Z",
-  "post_count": 74
+  "fetched": "2026-08-15T12:11:08Z",
+  "post_count": 85
 }
