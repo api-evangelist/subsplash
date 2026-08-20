@@ -30,6 +30,16 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/subsplash.
 tags:
 - Church
 - Ministry
+- Non-Profit
+- Giving
+- Media
+- Church Management
+- ChMS
+- Mobile Apps
+- Partner API
+tags_raw:
+- Church
+- Ministry
 - Nonprofit
 - Giving
 - Media
@@ -105,6 +115,11 @@ apis:
 - aid: subsplash:subsplash-groups-messaging-api
   name: Subsplash Groups and Messaging API
   tags:
+  - Group
+  - Messaging
+  - Communications
+  - Push Notifications
+  tags_raw:
   - Groups
   - Messaging
   - Communications
@@ -125,6 +140,10 @@ apis:
 - aid: subsplash:subsplash-events-api
   name: Subsplash Events API
   tags:
+  - Event
+  - Registrations
+  - Payments
+  tags_raw:
   - Events
   - Registrations
   - Payments
