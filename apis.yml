@@ -14,6 +14,17 @@ description: Subsplash is an all-in-one church and ministry engagement platform 
   is behind that gate, the APIs listed here are modeled from Subsplash's public
   product, support, and integration material rather than transcribed from an open
   reference, and are flagged endpointsModeled.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
