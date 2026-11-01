@@ -1,4 +1,4 @@
-# Subsplash (subsplash)
+# Subsplash
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,84 +64,98 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Subsplash is an all-in-one church and ministry engagement platform - custom mobile and TV apps, websites, media hosting and delivery, online giving, and church management (People, Groups, Events, Volunteers). Subsplash publishes a REST developer API for programmatic access to media, giving records, people, groups and messaging, and event registrations.
+Subsplash is an all-in-one church and ministry engagement platform - custom mobile and TV apps, websites, media hosting and delivery, online giving, and church management (People, Groups, Events, Volunteers). Subsplash publishes a REST developer API (OAuth 2.0, hosted on core.subsplash.com) for programmatic access to media, giving records, people, groups and messaging, and event registrations. Access is gated - full API documentation is released only after submitting the developer documentation-access form, and API credentials (Client ID / Client Secret) must be provisioned by a Subsplash representative on a qualifying paid plan (Pro / Enterprise). Because the documented endpoint surface is behind that gate, the APIs listed here are modeled from Subsplash's public product, support, and integration material rather than transcribed from an open reference, and are flagged endpointsModeled.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/subsplash/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/subsplash/refs/heads/main/apis.yml)
+**Areas:** Church · Ministry · Non-Profit · Giving · Media · Church Management · ChMS · Mobile App · Partner API
 
-## Access Model (Important)
+## Subsplash on APIs.io
 
-The Subsplash API is **real but gated**:
+Everything profiled for Subsplash is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/subsplash/](https://apis.io/providers/subsplash/)** — or go straight to one of the APIs or properties below.
 
-- **Documentation is form-gated.** Full developer documentation is released only after submitting the documentation-access form at [developer.subsplash.com/form](https://developer.subsplash.com/form). Subsplash is explicit that "this form grants access to documentation and resources only. It does not provide API credentials."
-- **Credentials are rep-provisioned.** API access requires OAuth 2.0 credentials (a Client ID and Client Secret) that must be set up in coordination with a Subsplash representative / Client Success Manager, and generally requires a qualifying paid plan (Pro / Enterprise tier).
-- **Authentication is OAuth 2.0.** Public integration material shows OAuth flows (Authorization Code, Client Credentials, and others) with a redirect handled at `https://core.subsplash.com/end-user-auth/v1/authproviders/result`, confirming `core.subsplash.com` as the platform API host.
+### APIs (5)
 
-Because the fully documented endpoint surface sits behind that gate, the APIs described in `apis.yml` are **modeled** (`endpointsModeled: true`) from Subsplash's public product, support, and integration material - not transcribed from an open reference. No `openapi/`, `rate-limits/`, `finops/`, or `collections/` artifacts are published here because no authoritative open specification is available to source them from.
+- [Subsplash Media Library API](https://apis.io/apis/subsplash/subsplash-media-library-api/) — Programmatic access to an organization's media catalog - sermons, series, podcasts, blogs, and announcements - for syncing content into external sites,…
+- [Subsplash Giving API](https://apis.io/apis/subsplash/subsplash-giving-api/) — Sync online giving and donation records from Subsplash Giving into accounting, CRM, and church-management systems - donations, donors, funds, and recurring…
+- [Subsplash People API](https://apis.io/apis/subsplash/subsplash-people-api/) — People Sync surface for unifying member and contact records across systems, plus Single Sign-On (SSO) user provisioning. Modeled from Subsplash's enterprise…
+- [Subsplash Groups and Messaging API](https://apis.io/apis/subsplash/subsplash-groups-messaging-api/) — Manage groups, group membership, and messaging, and trigger push notifications and in-app messages through Subsplash's communications engine. Endpoints are…
+- [Subsplash Events API](https://apis.io/apis/subsplash/subsplash-events-api/) — Manage events, event registrations, and event payments for syncing sign-ups and transactions into external systems. Endpoints are modeled; the documented…
 
-## Tags
+### Published properties
 
-- Church
-- Ministry
-- Nonprofit
-- Giving
-- Media
-- Church Management
-- ChMS
-- Mobile Apps
-- Partner API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (2)
 
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs (Modeled)
+- [Subsplash Domain Security](https://apis.io/security/subsplash/subsplash-domain-security/)
+- [Subsplash Vulnerability Disclosure](https://apis.io/security/subsplash/subsplash-vulnerability-disclosure/)
 
-### Subsplash Media Library API
+#### Plans and pricing (1)
 
-Programmatic access to an organization's media catalog - sermons, series, podcasts, blogs, and announcements - for syncing content into external sites, AI/search pipelines, and custom apps.
+Published plans, tiers and prices.
 
-- **Human URL:** [https://developer.subsplash.com/](https://developer.subsplash.com/)
-- **Base URL:** `https://core.subsplash.com`
+- [Subsplash Plans Pricing](https://apis.io/plans/subsplash/subsplash-plans-pricing/)
 
-### Subsplash Giving API
+## Where to find this API
 
-Sync online giving and donation records from Subsplash Giving into accounting, CRM, and church-management systems - donations, donors, funds, and recurring gifts.
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://developer.subsplash.com/](https://developer.subsplash.com/)
-- **Base URL:** `https://core.subsplash.com`
-
-### Subsplash People API
-
-People Sync surface for unifying member and contact records across systems, plus Single Sign-On (SSO) user provisioning.
-
-- **Human URL:** [https://developer.subsplash.com/](https://developer.subsplash.com/)
-- **Base URL:** `https://core.subsplash.com`
-
-### Subsplash Groups and Messaging API
-
-Manage groups, group membership, and messaging, and trigger push notifications and in-app messages through Subsplash's communications engine.
-
-- **Human URL:** [https://developer.subsplash.com/](https://developer.subsplash.com/)
-- **Base URL:** `https://core.subsplash.com`
-
-### Subsplash Events API
-
-Manage events, event registrations, and event payments for syncing sign-ups and transactions into external systems.
-
-- **Human URL:** [https://developer.subsplash.com/](https://developer.subsplash.com/)
-- **Base URL:** `https://core.subsplash.com`
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/Subsplash)
-- [LinkedIn](https://www.linkedin.com/company/subsplash)
 - [Website](https://www.subsplash.com)
 - [Documentation](https://developer.subsplash.com/)
-- [Sign Up (Docs Access Form)](https://developer.subsplash.com/form)
-- [Plans](plans/subsplash-plans-pricing.yml)
+- [Sign up](https://developer.subsplash.com/form)
+- [Blog](https://www.subsplash.com/blog)
+- [GitHub](https://github.com/Subsplash)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 11.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.4 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/subsplash/](https://apis.io/providers/subsplash/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Subsplash: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/subsplash/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
